@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import {
   View
 } from 'react-native';
@@ -9,20 +9,6 @@ import {createResponder} from 'react-native-gesture-responder';
 
 
 export default class Gallery extends Component {
-
-  static propTypes = {
-    ...View.propTypes,
-    images: PropTypes.array,
-
-    initialPage: PropTypes.number,
-    pageMargin: PropTypes.number,
-    onPageSelected: PropTypes.func,
-    onPageScrollStateChanged: PropTypes.func,
-    onPageScroll: PropTypes.func,
-
-    onSingleTapConfirmed: PropTypes.func,
-    onGalleryStateChanged: PropTypes.func
-  };
 
   imageRefs = new Map();
   activeResponder = undefined;
